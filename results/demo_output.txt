@@ -1,0 +1,57 @@
+====================================================================
+Aperture synthesis demo
+====================================================================
+
+Antennas            27
+Baselines           351
+Integrations        240
+uv samples          84,240 (x2 with conjugates)
+Observing frequency 1.4 GHz  (lambda = 21.41 cm)
+Longest baseline    4330 m = 20.2 klambda
+Expected resolution 10.20 arcsec  (~6.8 pixels)
+
+Sky model           5 point sources, 1.935 Jy total
+
+--------------------------------------------------------------------
+Run A - noiseless, cleaned deep (threshold_sigma=0.05)
+--------------------------------------------------------------------
+| Source | l (")| m (")| Input (Jy) | Recovered (Jy) | Error (%) |
+|---|---|---|---|---|---|
+| S1 | +0.0 | +0.0 | 1.000 | 1.000 | -0.04 |
+| S2 | +90.0 | +60.0 | 0.500 | 0.500 | -0.08 |
+| S3 | -120.0 | +45.0 | 0.250 | 0.250 | -0.16 |
+| S4 | +60.0 | -109.5 | 0.125 | 0.125 | -0.31 |
+| S5 | -75.0 | -79.5 | 0.060 | 0.060 | -0.64 |
+| **Total** | | | **1.935** | **1.933** | **-0.10** |
+
+Iterations 310, converged True
+
+--------------------------------------------------------------------
+Run B - thermal noise, cleaned to 3 sigma (what you'd really do)
+--------------------------------------------------------------------
+| Source | l (")| m (")| Input (Jy) | Recovered (Jy) | Error (%) |
+|---|---|---|---|---|---|
+| S1 | +0.0 | +0.0 | 1.000 | 0.977 | -2.26 |
+| S2 | +90.0 | +60.0 | 0.500 | 0.475 | -4.93 |
+| S3 | -120.0 | +45.0 | 0.250 | 0.224 | -10.35 |
+| S4 | +60.0 | -109.5 | 0.125 | 0.102 | -18.12 |
+| S5 | -75.0 | -79.5 | 0.060 | 0.036 | -40.48 |
+| **Total** | | | **1.935** | **1.815** | **-6.20** |
+
+Restoring beam      13.95" x 12.49" at 0.0 deg
+Residual RMS        1.198e-03 Jy/beam
+Dynamic range       119.7 (dirty) -> 1032.9 (restored)
+Iterations          112, converged True
+uv fill fraction    4.436%
+
+--------------------------------------------------------------------
+Run C - extended emission, where CLEAN's point-source prior fails
+--------------------------------------------------------------------
+Input flux          1.400 Jy (1.0 Jy extended + 0.4 Jy compact)
+CLEAN model flux    0.944 Jy
+Recovered           67.4 %
+The smooth component is poorly represented by delta functions, and
+short spacings missing from the uv-coverage resolve it out.
+
+Figures written to  F:\Research\Astrophysics\3\projects\00-foundations\aperture-synthesis\figures
+Results written to  F:\Research\Astrophysics\3\projects\00-foundations\aperture-synthesis\results

@@ -1,0 +1,106 @@
+{
+  "configuration": {
+    "n_antennas": 27,
+    "n_baselines": 351,
+    "n_integrations": 240,
+    "frequency_ghz": 1.4,
+    "latitude_deg": 34.0,
+    "declination_deg": 45.0,
+    "n_pix": 512,
+    "cell_arcsec": 1.5,
+    "max_baseline_m": 4330.127018922194,
+    "noise_jy_per_visibility": 0.35,
+    "seed": 20261102
+  },
+  "beam": {
+    "expected_resolution_arcsec": 10.200448060492535,
+    "fitted_bmaj_arcsec": 13.954822488839612,
+    "fitted_bmin_arcsec": 12.488339361940405,
+    "fitted_bpa_deg": 0.00012224633246660233,
+    "uv_fill_fraction": 0.0443572998046875
+  },
+  "run_a_noiseless_deep": {
+    "threshold_sigma": 0.05,
+    "iterations": 310,
+    "model_flux_jy": 1.9330558528095367,
+    "input_flux_jy": 1.935,
+    "worst_percent_error": 0.6354968166533946,
+    "per_source": [
+      {
+        "name": "S1",
+        "input_jy": 1.0,
+        "recovered_jy": 0.999619942945454,
+        "percent_error": -0.038005705454602356
+      },
+      {
+        "name": "S2",
+        "input_jy": 0.5,
+        "recovered_jy": 0.4996009666957973,
+        "percent_error": -0.07980666084054233
+      },
+      {
+        "name": "S3",
+        "input_jy": 0.25,
+        "recovered_jy": 0.249609609959807,
+        "percent_error": -0.15615601607720242
+      },
+      {
+        "name": "S4",
+        "input_jy": 0.125,
+        "recovered_jy": 0.12460663129847042,
+        "percent_error": -0.3146949612236605
+      },
+      {
+        "name": "S5",
+        "input_jy": 0.06,
+        "recovered_jy": 0.05961870191000796,
+        "percent_error": -0.6354968166533946
+      }
+    ]
+  },
+  "run_b_noisy_3sigma": {
+    "threshold_sigma": 3.0,
+    "iterations": 112,
+    "model_flux_jy": 1.8149625992084246,
+    "residual_rms_jy_per_beam": 0.001197805809296467,
+    "dynamic_range_dirty": 119.74523034948156,
+    "dynamic_range_restored": 1032.8584991018556,
+    "per_source": [
+      {
+        "name": "S1",
+        "input_jy": 1.0,
+        "recovered_jy": 0.9774479125188207,
+        "percent_error": -2.2552087481179317
+      },
+      {
+        "name": "S2",
+        "input_jy": 0.5,
+        "recovered_jy": 0.4753258315363521,
+        "percent_error": -4.934833692729579
+      },
+      {
+        "name": "S3",
+        "input_jy": 0.25,
+        "recovered_jy": 0.224123310676507,
+        "percent_error": -10.350675729397196
+      },
+      {
+        "name": "S4",
+        "input_jy": 0.125,
+        "recovered_jy": 0.10235521172515596,
+        "percent_error": -18.11583061987523
+      },
+      {
+        "name": "S5",
+        "input_jy": 0.06,
+        "recovered_jy": 0.03571033275158885,
+        "percent_error": -40.482778747351915
+      }
+    ]
+  },
+  "run_c_extended": {
+    "input_flux_jy": 1.4,
+    "model_flux_jy": 0.9435713703676422,
+    "percent_recovered": 67.39795502626016
+  }
+}

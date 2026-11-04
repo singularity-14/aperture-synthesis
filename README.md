@@ -248,5 +248,3 @@ visibilities from a Measurement Set instead of simulating them.
 - Condon & Ransom, *Essential Radio Astronomy* (NRAO, free online)
 - Thompson, Moran & Swenson, *Interferometry and Synthesis in Radio Astronomy*,
   3rd ed. — the uvw rotation here is their eq. 4.1
-
-MIT licensed.
